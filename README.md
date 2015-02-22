@@ -1,28 +1,31 @@
-# Mars-Rover
-Driving around Mars
-
 Mars Rover Kata
-This code is a part of the Java Tutorial Through Katas: Mars Rover article published on Technology Conversations article.
+===============
 
-Description
+The Mars rover is programmed to drive around Mars. Its programming is very simple. The commands are the following:
+<dl>
+  <dt>s</dt>
+  <dd>drive in a straight line</dd>
+  <dt>r</dt>
+  <dd>turn right</dd>
+  <dt>l</dt>
+  <dd>turn left</dd>
+</dl>
 
-Develop an api that moves a rover around on a grid.
+Note that the Mars rover always land at the <code>X</code> and starts by facing east.
 
-You are given the initial starting point (x,y) of a rover and the direction (N,S,E,W) it is facing.
-The rover receives a character array of commands.
-Implement commands that move the rover forward/backward (f,b).
-Implement commands that turn the rover left/right (l,r).
-Implement wrapping from one edge of the grid to another. (planets are spheres after all)
-Implement obstacle detection before each move to a new square. If a given sequence of commands encounters an obstacle, the rover moves up to the last possible point and reports the obstacle.
-Source: Dallas Hack Club.
-
-Implementation
-
-Recommended approach to solve this kata is by using TDD. Code in this repo is written in Java 7 with AssertJ for tests. Tasks execution (compile, test, etc) is done with Gradle.
-
-Running
-
-To run all tests:
-
-gradle test
-For more details please visit the Java Tutorial Through Katas: Mars Rover article published on Technology Conversations article.
+The Mars rover can send a 2D string representation of its path back to Mission Control. The following character are
+used with the following meanings:
+<dl>
+  <dt>X</dt>
+  <dd>where the Mars rover landed</dd>
+  <dt>*</dt>
+  <dd>current position of the Mars rover</dd>
+  <dt>-</dt>
+  <dd>path in the west-east direction</dd>
+  <dt>|</dt>
+  <dd>path in the north-south direction</dd>
+  <dt>+</dt>
+  <dd>a place where the Mars rover turned or a crossroad</dd>
+  <dt>S</dt>
+  <dd>a place where a sample was taken</dd>
+</dl>
